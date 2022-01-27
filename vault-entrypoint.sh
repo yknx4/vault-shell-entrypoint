@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
+set -eu
 
 VAULT_SECRETS_DIR=${VAULT_SECRETS_DIR:='/vault/secrets'}
 echo "Attempting to load .env files from ${VAULT_SECRETS_DIR}."
