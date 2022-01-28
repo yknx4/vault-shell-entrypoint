@@ -6,6 +6,7 @@ VAULT_SECRETS_DIR=${VAULT_SECRETS_DIR:='/vault/secrets'}
 echo "Attempting to load .env files from ${VAULT_SECRETS_DIR}."
 
 if [ -d "$VAULT_SECRETS_DIR" ]; then
+  shopt -s nullglob
   FILES="${VAULT_SECRETS_DIR}/*.env"
   for f in $FILES
   do
